@@ -16,10 +16,7 @@ def classifier(test_data):
         test_data = list(test_data)
     # Transform the test data
     transformed = vectorizer.transform(test_data).toarray()
-    # Predict the class
-    predicted = model.predict(transformed).tolist()
-
-    return predicted
+    return model.predict(transformed).tolist()
     
     
 
